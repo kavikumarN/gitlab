@@ -1,0 +1,16 @@
+https://about.gitlab.com/install/#centos-6
+
+ 1. Install and configure the necessary dependencies
+
+On CentOS 6 (and RedHat/Oracle/Scientific Linux 6), the commands below will also open HTTP, HTTPS and SSH access in the system firewall.
+
+sudo yum install -y curl policycoreutils-python openssh-server cronie
+sudo lokkit -s http -s ssh
+
+ Next, install Postfix to send notification emails. If you want to use another solution to send emails please skip this step and configure an external SMTP server after GitLab has been installed.
+
+sudo yum install postfix
+sudo service postfix start
+sudo chkconfig postfix on
+
+ 2. Add the GitLab package repository and install the package 

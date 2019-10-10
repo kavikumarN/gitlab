@@ -14,3 +14,5 @@ sudo service postfix start
 sudo chkconfig postfix on
 
  2. Add the GitLab package repository and install the package 
+ 
+ sudo EXTERNAL_URL="https://gitlab.example.com" apt-get install gitlab-ee
